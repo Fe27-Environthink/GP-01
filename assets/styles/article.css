@@ -1,0 +1,70 @@
+/* Font */
+@font-face {
+    font-family: "Semibold";
+    src: url(../font/static/PlusJakartaSans-SemiBold.ttf);
+}
+  
+:root {
+    --color-bg: #ffffff;
+    --color-main: #14ae5c;
+}
+  
+/* Navbar */
+nav {
+    font-family: "Semibold";
+}
+  
+#logo {
+    height: 2.4em;
+}
+  
+.btnDonasi {
+    background-color: var(--color-main) !important;
+    color: var(--color-bg) !important;
+}
+
+#artikel {
+    cursor: pointer;
+}
+
+.card {
+    background: #FFFFFF;
+    border: 1px solid #D9D9D9;
+    box-shadow: 0px 8px 24px rgba(112, 144, 176, 0.15);
+    border-radius: 8px;
+}
+
+#infografis {
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    font-family: "Semibold";
+    background-color: var(--color-main);
+}
+
+.judulDeskripsiEnvironthink {
+    color: #25ff01 !important;
+}
+
+.container p {
+    color: white;
+}
+
+#copyRightLine {
+    height: 2px;
+    border: none;
+    background-color: white;
+}
+
+/* Media Query */
+@media screen and (max-width: 576px) {
+    #medsos {
+        margin-top: 1em;
+    }
+
+    #country {
+        margin-top: 0.2em;
+    }
+}
