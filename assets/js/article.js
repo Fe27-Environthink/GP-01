@@ -8,7 +8,7 @@ fetch(endpoint)
     .then((data) => {
     data.map((el) => {
         article.innerHTML += `
-            <div class="col-sm-4 mb-3 mb-sm-0 pt-4 col-artikel">
+            <div class="col-sm-4 mb-3 pt-4 col-artikel">
                 <div class="card card-artikel">
                     <img src=${el.images} class="card-img-top" alt="artikel">
                     <div class="card-body">
