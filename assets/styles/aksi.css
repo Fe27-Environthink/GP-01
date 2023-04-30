@@ -1,4 +1,4 @@
-#daftar-aksi p {
+#aksi p {
     color: black;
   
 }
@@ -12,4 +12,8 @@ footer{
 .card img{
     height:230px;
 }
+.btn-petisi{
+    background-color: #FF4D4F;
+}
+
 
