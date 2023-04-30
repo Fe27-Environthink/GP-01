@@ -7,7 +7,7 @@ fetch(endpoint)
     })
     .then((data) => {
         // menampilkan data dengan index 0-2
-        for (let i = 0; i < 3; i++) {
+        for (let i = 0; i < 3 &&  i < data.length; i++) {
             article.innerHTML += `
                     <div class="col-sm-4 mb-3 pt-4 col-artikel">
                         <div class="card card-artikel">
