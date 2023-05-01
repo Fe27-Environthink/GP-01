@@ -11,12 +11,12 @@ fetch("https://644d177e57f12a1d3dd777a1.mockapi.io/infografis")
                  infografis.innerHTML += `
         <div class="col-sm-4 mb-3">
             <div class="card">
-                <img src=${data[i].image} class="card-img-top" data-bs-toggle="modal" data-bs-target="#staticBackdrop" alt="artikel">
+                <img src=${data[i].image} class="card-img-top" data-bs-toggle="modal" data-bs-target="#${data[i].id}Backdrop" alt="artikel">
                 <div class="card-body">
                     <h1 class="card-title fs-6" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                         ${data[i].titleInfografis}
                     </h1>
-                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal fade" id="${data[i].id}Backdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                         <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
@@ -34,7 +34,7 @@ fetch("https://644d177e57f12a1d3dd777a1.mockapi.io/infografis")
         </div>
         
         `
-            
+        console.log(data[i]);    
         }
         let btnInfografis= document.getElementById("infografis-lainnya");
 
@@ -45,12 +45,12 @@ fetch("https://644d177e57f12a1d3dd777a1.mockapi.io/infografis")
             infografis.innerHTML += `
             <div class="col-sm-4 mb-3">
                 <div class="card">
-                    <img src=${data[i].image} class="card-img-top" data-bs-toggle="modal" data-bs-target="#staticBackdrop" alt="artikel">
+                    <img src=${data[i].image} class="card-img-top" data-bs-toggle="modal" data-bs-target="#${data[i].id}Backdrop" alt="artikel">
                     <div class="card-body">
                         <h1 class="card-title fs-6" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                             ${data[i].titleInfografis}
                         </h1>
-                        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal fade" id="${data[i].id}Backdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                             <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
