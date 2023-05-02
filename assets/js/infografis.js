@@ -10,10 +10,10 @@ fetch("https://644d177e57f12a1d3dd777a1.mockapi.io/infografis")
         for (let i = 0; i < 3; i++) {
                  infografis.innerHTML += `
         <div class="col-sm-4 mb-3">
-            <div class="card">
-                <img src=${data[i].image} class="card-img-top" data-bs-toggle="modal" data-bs-target="#${data[i].id}Backdrop" alt="artikel">
+            <div class="card card-infografis">
+                <img src=${data[i].images} style="cursor: pointer;" class="card-img-top" data-bs-toggle="modal" data-bs-target="#${data[i].id}Backdrop" alt="artikel">
                 <div class="card-body">
-                    <h1 class="card-title fs-6" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    <h1 class="card-title fs-6" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                         ${data[i].titleInfografis}
                     </h1>
                     <div class="modal fade" id="${data[i].id}Backdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -24,7 +24,7 @@ fetch("https://644d177e57f12a1d3dd777a1.mockapi.io/infografis")
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
-                                <img src=${data[i].image} class="card-img-top" alt="infografis">
+                                <img src=${data[i].images} class="card-img-top" alt="infografis">
                             </div>
                         </div>
                         </div>
@@ -44,10 +44,10 @@ fetch("https://644d177e57f12a1d3dd777a1.mockapi.io/infografis")
            for (let i = index; i < index+3 &&  i < data.length ; i++) {
             infografis.innerHTML += `
             <div class="col-sm-4 mb-3">
-                <div class="card">
-                    <img src=${data[i].image} class="card-img-top" data-bs-toggle="modal" data-bs-target="#${data[i].id}Backdrop" alt="artikel">
+                <div class="card card-infografis">
+                    <img src=${data[i].images} style="cursor: pointer;" class="card-img-top" data-bs-toggle="modal" data-bs-target="#${data[i].id}Backdrop" alt="artikel">
                     <div class="card-body">
-                        <h1 class="card-title fs-6" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                        <h1 class="card-title fs-6" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                             ${data[i].titleInfografis}
                         </h1>
                         <div class="modal fade" id="${data[i].id}Backdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -58,7 +58,7 @@ fetch("https://644d177e57f12a1d3dd777a1.mockapi.io/infografis")
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                    <img src=${data[i].image} class="card-img-top" alt="infografis">
+                                    <img src=${data[i].images} class="card-img-top" alt="infografis">
                                 </div>
                             </div>
                             </div>
@@ -79,7 +79,7 @@ fetch("https://644d177e57f12a1d3dd777a1.mockapi.io/infografis")
     //     infografis.innerHTML += `
     //     <div class="col-sm-4 mb-3">
     //         <div class="card">
-    //             <img src=${el.image} class="card-img-top" data-bs-toggle="modal" data-bs-target="#staticBackdrop" alt="artikel">
+    //             <img src=${el.images} class="card-img-top" data-bs-toggle="modal" data-bs-target="#staticBackdrop" alt="artikel">
     //             <div class="card-body">
     //                 <h1 class="card-title fs-6" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
     //                     ${el.titleInfografis}
@@ -92,7 +92,7 @@ fetch("https://644d177e57f12a1d3dd777a1.mockapi.io/infografis")
     //                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
     //                         </div>
     //                         <div class="modal-body">
-    //                             <img src=${el.image} class="card-img-top" alt="infografis">
+    //                             <img src=${el.images} class="card-img-top" alt="infografis">
     //                         </div>
     //                     </div>
     //                     </div>
