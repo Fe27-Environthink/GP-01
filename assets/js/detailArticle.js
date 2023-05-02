@@ -19,5 +19,9 @@ fetchDetailArticle.then(response => response.json())
   document.getElementById("paragraf4").textContent=data.paragraf4;
   document.getElementById("paragraf5").textContent=data.paragraf5;
   document.getElementById("paragraf6").textContent=data.paragraf6;
+  document.getElementById("paragraf7").textContent=data.paragraf7;
+  document.getElementById("paragraf8").textContent=data.paragraf8;
+  document.getElementById("paragraf9").textContent=data.paragraf9;
+  document.getElementById("paragraf10").textContent=data.paragraf10;
     
 })
