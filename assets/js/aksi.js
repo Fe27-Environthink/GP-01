@@ -1,4 +1,7 @@
-const aksiList = document.getElementById("aksi-list");
+
+
+function fetchData() {
+    const aksiList = document.getElementById("aksi-list");
 const fetchAksi = fetch("https://64506cd6e1f6f1bb22977ba9.mockapi.io/aksi")
 
 fetchAksi
@@ -67,6 +70,8 @@ fetchAksi
     //     `
     // })
 })
+}
+window.addEventListener('load', fetchData);
 
 
 

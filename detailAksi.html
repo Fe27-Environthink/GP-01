@@ -99,19 +99,19 @@
           <form class="form-group" id="form-petisi">
             <div class="mb-3">
               <label for="namaLengkap" class="form-label">Nama Lengkap</label>
-              <input type="text" class="form-control" id="exampleFormControlInput1" />
+              <input type="text" class="form-control" id="namaLengkap" required />
             </div>
             <div class="mb-3">
-              <label for="exampleFormControlInput1" class="form-label">Email address</label>
-              <input type="email" class="form-control" id="exampleFormControlInput1" />
+              <label for="email" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="email" required />
             </div>
             <div class="mb-3">
               <label for="nomorTelepone" class="form-label">Nomor Telepon</label>
-              <input type="text" class="form-control" id="nomorTelepone" />
+              <input type="text" class="form-control" id="nomorTelepone" required />
             </div>
             <div class="mb-3">
               <label for="kota" class="form-label">Kota</label>
-              <input type="text" class="form-control" id="kota" />
+              <input type="text" class="form-control" id="kota" required />
             </div>
             
   
@@ -139,7 +139,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <h1 class="modal-title fs-5" id="staticBackdropLabel">Sukses</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onclick="formReload()"></button>
         </div>
         <div class="modal-body">
          <h4 class="text-center"> Tanda tangan petisi ditambahkan</h4>
