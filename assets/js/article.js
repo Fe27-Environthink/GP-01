@@ -1,28 +1,19 @@
-let article = document.getElementById('articlesContent')
+const article = document.getElementById('articlesContent')
 const endpoint = "https://644b56f917e2663b9ded34b8.mockapi.io/article"
 
-const detailArticle = (id) => {
-    localStorage.removeItem("idContent");
-    localStorage.setItem("idContent", `${id}`);
-    window.location.href = "detailArticle.html";
-};
-  
 fetch(endpoint)
     .then((response) => {
         return response.json();
     })
     .then((data) => {
-        data.map ((datas) => {
-            
-        })
         // menampilkan data dengan index 0-2
         for (let i = 0; i < 3 &&  i < data.length; i++) {
             article.innerHTML += `
-                <div class="col-sm-4 mb-3 pt-4" onclick="detailArticle(${data[i].id})">
+                <div class="col-sm-4 mb-3 pt-4" onclick="detailArticle.html?id=${data[i].id}">
                     <div class="card card-artikel" >
                         <img src=${data[i].images} class="card-img-top" alt="artikel">
                         <div class="card-body">
-                            <a class="wrapperLinkTitleArticles" href="#">
+                            <a class="wrapperLinkTitleArticles" href="detailArticle.html?id=${data[i].id}">
                                 <h5 class="card-title">${data[i].titleArticle}</h5>
                             </a>
                             <p class="card-text" style="color: #595959; text-align: justify;">${data[i].descArticle}</p>
@@ -43,11 +34,11 @@ fetch(endpoint)
         btnArtikel.addEventListener("click",()=>{
            for (let i = index; i < index+3; i++) {
             article.innerHTML += `
-            <div class="col-sm-4 mb-3 pt-4" onclick="detailArticle(${data[i].id})">
+            <div class="col-sm-4 mb-3 pt-4" onclick="detailArticle.html?id=${data[i].id}">
                 <div class="card card-artikel" >
                     <img src=${data[i].images} class="card-img-top" alt="artikel">
                     <div class="card-body">
-                        <a class="wrapperLinkTitleArticles" href="#">
+                        <a class="wrapperLinkTitleArticles" href="detailArticle.html?id=${data[i].id}">
                             <h5 class="card-title">${data[i].titleArticle}</h5>
                         </a>
                         <p class="card-text" style="color: #595959; text-align: justify;">${data[i].descArticle}</p>
