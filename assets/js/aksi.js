@@ -43,10 +43,11 @@ fetchAksi
         `
             
         }
-        if (!index<data.length) {
+        index=index+3
+        if (index>=data.length) {
             btnAksi.style.visibility="hidden"
         }
-        index=index+3
+        
           
         
     })
