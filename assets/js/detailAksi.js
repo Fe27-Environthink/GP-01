@@ -10,14 +10,31 @@ const fetchDetailAksi = fetch(
 fetchDetailAksi
   .then((response) => response.json())
   .then((data) => {
+    let link =`detailAksi.html?id=${data.id}`
+       
+       let desc =`${data.jumlahDukungan}  orang yang sudah mendukung`
+       let paragrafPetisi =data.paragrafPetisi
+
+        if (data.Target-data.jumlahDukungan==0) {  
+            desc = "Petisi Mencapai Kemenangan"
+            document.getElementById("bar").style.visibility="hidden"
+            document.getElementById("figcaption").innerHTML=""
+            document.getElementById("form-petisi").innerHTML=`<a class="btn btn-success bg-main d-block fw-bold" href="aksi.html">Ikuti Aksi Yang Lainnya</a>`
+            paragrafPetisi="mari kita lanjutkan perjuangan kita dengan bergabung dalam aksi-aksi lain yang sejenis untuk terus memperjuangkan hak-hak kita dan membawa perubahan positif bagi masyarakat. Bersama-sama kita bisa mewujudkan perubahan yang kita inginkan!"
+        }
+        else if (data.jumlahDukungan==0) {
+            desc = "belum ada dukungan"
+            
+        }
     document.getElementById("title").textContent = data.nama;
     document.getElementById("image").src = data.image;
     document.getElementById("paragraf1").textContent = data.paragraf1;
     document.getElementById("paragraf2").textContent = data.paragraf2;
     document.getElementById("paragraf-konklusi").textContent =
       data.paragrafKonklusi;
-    document.getElementById("heading-form").textContent =
-      data.jumlahDukungan + " orang yang sudah mendukung";
+      document.getElementById("paragarfPetisi").textContent=paragrafPetisi;
+    document.getElementById("heading-form").textContent = desc
+      ;
     document.getElementById("caption-bar").textContent = data.jumlahDukungan;
     document.getElementById("target").textContent = data.Target;
     let Persentase = (data.jumlahDukungan / data.Target) * 100;

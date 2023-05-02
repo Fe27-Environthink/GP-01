@@ -8,15 +8,27 @@ fetchAksi
 .then(response =>response.json())
 .then(data =>{
     for (let i = 0; i < 3; i++) {
-        
+       let link =`detailAksi.html?id=${data[i].id}`
+       let  classLink="btn-success bg-main" 
+       let desc =`${data[i].jumlahDukungan} orang mendukung`
+
+        if (data[i].Target-data[i].jumlahDukungan==0) {
+            classLink= "btn-secondary"
+            desc = "Petisi Mencapai Kemenangan"
+        }
+        else if (data[i].jumlahDukungan==0) {
+            desc = "belum ada dukungan"
+            
+        }
+  
         aksiList.innerHTML +=`
         <div class="col-md-4 col-sm-6 mb-4 ">
             <div class="card" >
                 <img src="${data[i].image}" class="card-img-top" alt="...">
                 <div class="card-body">
                   <h5 class="card-title">${data[i].nama}</h5>
-                  <p class="card-text text-secondary"><icon class="fa fa-users text-secondary me-2 "> </icon>${data[i].jumlahDukungan} orang mendukung</p>
-                  <a href="detailAksi.html?id=${data[i].id}" id="btn-aksi"   class="btn btn-success bg-main d-block ">Pelajari Selengkapnya</a>
+                  <p class="card-text text-secondary"><icon class="fa fa-users text-secondary me-2 "> </icon>${desc}</p>
+                  <a href="${link}" id="btn-aksi"    class="btn d-block ${classLink} ">Pelajari Selengkapnya</a>
                 </div>
               </div>
               
@@ -71,6 +83,7 @@ fetchAksi
     // })
 })
 }
+
 window.addEventListener('load', fetchData);
 
 
