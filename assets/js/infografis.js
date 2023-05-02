@@ -70,6 +70,9 @@ fetch("https://644d177e57f12a1d3dd777a1.mockapi.io/infografis")
             `
            }
            index=index+3
+           if (index >= data.length) {
+            btnInfografis.style.visibility="hidden"
+        }
         })
    
  })
