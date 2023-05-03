@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Environthink</title>
     <!-- Link CSS -->
-    <link rel="stylesheet" href="./assets/styles/styles.css" />
+    <link rel="stylesheet" href="./detailArticle.css" />
 
     <!-- Link CSS Bootstrap -->
     <link
@@ -23,13 +23,10 @@
   </head>
   <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg bg-white shadow sticky-top">
+    <nav class="navbar navbar-expand-lg fixed-to shadow">
       <div class="container d-flex justify-content-between">
-        <a class="navbar-brand" href="./index.html"
-          ><img
-            src="./assets/images/logo.png"
-            id="logo"
-            alt="Environthink Logo"
+        <a class="navbar-brand" href="/index.html"
+          ><img src="../../images/logo.png" id="logo" alt="Environthink Logo"
         /></a>
         <button
           class="navbar-toggler"
@@ -72,115 +69,50 @@
       </div>
     </nav>
 
-    <!-- Highlight 1 -->
-    <div class="wrapperHighlight">
-      <div class="container">
-        <div class="wrapperHighlight1Content ms-2 me-2">
-          <h1 class="titleHighlight1 text-white">
-            Satu langkah kecil untuk lingkungan, satu lompatan besar untuk bumi
-          </h1>
-          <p class="subTitleHighlight1 mt-4 mb-4">
-            Jangan tunggu sampai terlambat, mari kita bertindak sekarang untuk
-            menyelamatkan planet kita.
-          </p>
-          <div class="btnHighlight1 btn mb-5">Ikuti Aksi</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Judul Title Article -->
-    <div
-      class="container d-flex flex-column justify-content-center align-items-center text-center"
-    >
-      <h3 class="titleNewArticle mt-5 text-center">Artikel Terbaru</h3>
-      <hr class="lineArticle text-center opacity-100" />
-    </div>
-
     <!-- Konten -->
-    <div id="articlesContent" class="container mt-5">
-      <!-- <div class="row ms-1 me-1 mt-5 mb-5">
-        <div class="col-md-4 p-0 me-4">
+    <div id="articlesContent" class="container">
+      <!-- <div class="row ms-1 me-1 mt-5">
+        <div class="col-md 12 mb-3">
+          <p class="hashTag m-0 p-0">
+            <span id="category">Cerita</span> <span id="dot"></span>
+            <span id="hashTagArticle">#Iklim</span>
+          </p>
+          <h1 class="Judul">Lebaran di Desa yang Tenggelam</h1>
+          <p class="text-dark">
+            By <span id="Author " class="fw-bold">Greenpeace Indonesia</span>
+            <i class="bi bi-clock ms-1 me-1"></i>
+            <span id="dateArticle">26 April 2023</span>
+          </p>
+        </div>
+        <div class="col-md-12 p-0 me-4 text-center">
           <img
-            class="articlesImage"
+            class="articlesImage img-fluid"
             src="https://www.greenpeace.org/static/planet4-indonesia-stateless/2023/04/57322f08-lebaran_timbulsloko_2023_aji-styawan-greenpeace-9-1024x683.jpg"
             alt=""
           />
         </div>
-        <div id="detailPreviewArticles" class="col-md-5 ps-0 pe-0">
-          <p class="hashTag m-0 p-0">
-            <span id="category">Cerita</span> <span id="dot"></span>
-            <span id="hashTagArticle">#Iklim &nbsp; #Hutan</span>
+        <div id="detailPreviewArticles" class="col-md-12 ps-0 pe-0">
+          <p class="detailArticle1 text-dark">
+            Matahari masih condong di ufuk timur pada Sabtu, 22 April lalu, saat
+            warga mulai meriung di dalam dan sekitar Masjid Darul Ibad, Desa
+            Timbulsloko, Kecamatan Sayung, Demak, Jawa Tengah.
           </p>
-          <a class="wrapperLinkTitleArticles" href="#">
-            <h4 class="titleArticles">Lebaran di Desa yang Tenggelam</h4>
-          </a>
-          <p class="descArticles text-dark">
-            Merayakan Idulfitri di desa yang terdampak krisis iklim.
+          <p class="detailArticle2 text-dark">
+            Di atas geladak kayu yang dibangun karena banjir rob menggenangi
+            desa itu, warga menggelar sajadah. Mereka melaksanakan salat
+            Idulfitri 1444 Hijriah.
           </p>
-          <p class="text-dark">
-            <span id="authorArticle"> Greenpeace Indonesia</span>
-            <span id="dot2"></span> <span id="dateArticle">26 April 2023</span>
+          <p class="detailArticle3 text-dark">
+            Beberapa tahun lalu, masjid ini sempat terendam air laut sehingga
+            warga kesulitan untuk salat berjamaah. Pada awal 2020, warga
+            merenovasinya dengan membangun panggung kayu. Setelah renovasi,
+            aktivitas keagamaan Islam pun rutin digelar kembali di masjid
           </p>
+          <p class="detailArticle4"></p>
+          <p class="detailArticle5"></p>
+          <p class="detailArticle6"></p>
         </div>
       </div> -->
-    </div>
-
-    <div class="wrapperBtnArtikelLainnya">
-      <div class="container">
-        <button class="btnArtikelLainnya btn ps-4 pe-4">Artikel Lainnya</button>
-      </div>
-    </div>
-
-    <!-- Highlight 2-->
-    <div class="Highlight2 text-center mt-5">
-      <h1 class="titleHighlight2 text-white pt-5">Menjadi Aktivis Digital</h1>
-      <p class="subTitleHighlight2 text-white pb-5 me-3 ms-3">
-        Jangan biarkan suaramu hilang di kerumunan jadilah aktivis digital dan
-        berikan pengaruhmu pada dunia
-      </p>
-      <div class="container">
-        <div class="row justify-content-center gap-3 gap-md-5 pb-5 ms-3 me-3">
-          <div class="col-12 col-md-3">
-            <a href="#" type="button"
-              ><img
-                class="imgBtnHighlight2"
-                src="./assets/images/infoLogo.png"
-                alt="Pelajari!"
-            /></a>
-            <h2 class="titleBtnHighlight2 text-white">Pelajari Isunya</h2>
-            <p class="subTitleBtnHighlight2">
-              Pengetahuan adalah kunci untuk melindungi Bumi dengan lebih tepat
-              dan efektif. Mari bersama-sama pelajari isunya
-            </p>
-          </div>
-          <div class="col-12 col-md-3">
-            <a href="#" type="button">
-              <img
-                class="imgBtnHighlight2"
-                src="./assets/images/shareLogo.png"
-                alt="Share!"
-            /></a>
-            <h2 class="titleBtnHighlight2 text-white">Bagikan Kampanyenya</h2>
-            <p class="subTitleBtnHighlight2">
-              Pengetahuan adalah kunci untuk melindungi Bumi dengan lebih tepat
-              dan efektif. Mari bersama-sama pelajari isunya
-            </p>
-          </div>
-          <div class="col-12 col-md-3">
-            <a href="#" type="button"
-              ><img
-                class="imgBtnHighlight2"
-                src="./assets/images/peopleLogo.png"
-                alt="Aktivis"
-            /></a>
-            <h2 class="titleBtnHighlight2 text-white">Lakukan Aksi</h2>
-            <p class="subTitleBtnHighlight2">
-              Pengetahuan adalah kunci untuk melindungi Bumi dengan lebih tepat
-              dan efektif. Mari bersama-sama pelajari isunya
-            </p>
-          </div>
-        </div>
-      </div>
     </div>
 
     <!-- Footer -->
@@ -230,14 +162,14 @@
             ></a>
           </div>
         </div>
-        <hr class="mb-2 opacity-100 border border-white" />
-        <div class="row pb-0 pb-md-3">
+        <hr id="copyRightLine" class="mb-2" />
+        <div class="row">
           <div class="col-sm-12 col-md-6 text-white">
             Copyright &#169; 2023. Greenpeace. All Right Reserved.
           </div>
           <div
             id="country"
-            class="col-sm-12 col-md-6 text-center text-md-end mb-5 mb-md-0 text-white"
+            class="col-sm-12 col-md-6 text-md-end text-sm-start text-white"
           >
             Indonesia
           </div>
@@ -253,6 +185,6 @@
     ></script>
 
     <!-- Script JS -->
-    <script src="./assets/js/script.js"></script>
+    <script src="./scriptDetailArticlePage.js"></script>
   </body>
 </html>
