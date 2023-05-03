@@ -32,7 +32,7 @@ fetch(endpoint)
         let index=3
         // menambahkan 3 artikel setiap menekan tombol artikel lainnya
         btnArtikel.addEventListener("click",()=>{
-           for (let i = index; i < index+3; i++) {
+           for (let i = index; i < index+3 &&  i < data.length; i++) {
             article.innerHTML += `
             <div class="col-sm-4 mb-3 pt-4" onclick="detailArticle.html?id=${data[i].id}">
                 <div class="card card-artikel" >
@@ -52,6 +52,10 @@ fetch(endpoint)
             `
            }
            index=index+3
+           if (index >= data.length) {
+            btnArtikel.style.visibility="hidden"
+        }
+          
         })
     // data.map((el) => {
     //     article.innerHTML += `
