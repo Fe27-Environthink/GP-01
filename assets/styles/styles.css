@@ -147,17 +147,6 @@ nav {
   margin-bottom: 1em;
 }
 
-.btnArtikelLainnya {
-  font-family: "Semibold" !important;
-  color: #14ae5c !important;
-  outline: 2px solid #14ae5c;
-}
-
-.btnArtikelLainnya:hover {
-  background-color: #14ae5c !important;
-  color: white !important;
-}
-
 /* Footer */
 footer {
   font-family: "Semibold";
