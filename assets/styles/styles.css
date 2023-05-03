@@ -19,7 +19,7 @@
   --color-main: #14ae5c;
 }
 
-.bg-main{
+.bg-main {
   background-color: #14ae5c;
 }
 /* Navbar */
@@ -40,7 +40,7 @@ nav {
 
 .wrapperHighlight {
   background-image: url(../images/imageHighlight1.png);
-  height: auto;
+  height: 30em;
   width: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -162,7 +162,6 @@ nav {
 footer {
   font-family: "Semibold";
   background-color: var(--color-main);
-  
 }
 
 .judulDeskripsiEnvironthink {
