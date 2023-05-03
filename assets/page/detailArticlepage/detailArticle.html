@@ -23,9 +23,11 @@
   </head>
   <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg fixed-to shadow">
-      <div class="container d-flex justify-content-between">
-        <a class="navbar-brand" href="/index.html"
+    <nav
+      class="navbar navbar-expand-lg d-flex flex-column justify-content-between shadow sticky-top bg-white"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="#"
           ><img src="../../images/logo.png" id="logo" alt="Environthink Logo"
         /></a>
         <button
@@ -46,13 +48,15 @@
         >
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link active" aria-current="page" href="index.html"
+                >Home</a
+              >
             </li>
             <li class="nav-item">
               <a class="nav-link active" href="#">Aksi</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="#">Artikel</a>
+              <a class="nav-link active" href="article.html">Artikel</a>
             </li>
             <li class="nav-item mt-1 mb-2 ms-3 me-4">
               <a class="" href="#"
@@ -71,48 +75,164 @@
 
     <!-- Konten -->
     <div id="articlesContent" class="container">
-      <!-- <div class="row ms-1 me-1 mt-5">
+      <div class="row ms-1 me-1 mt-5">
         <div class="col-md 12 mb-3">
           <p class="hashTag m-0 p-0">
-            <span id="category">Cerita</span> <span id="dot"></span>
-            <span id="hashTagArticle">#Iklim</span>
+            <span id="cathegory"></span> <span id="dot"></span>
+            <span id="hashTag"></span>
           </p>
-          <h1 class="Judul">Lebaran di Desa yang Tenggelam</h1>
+          <h1 class="titleArticle" id="titleArticle"></h1>
           <p class="text-dark">
-            By <span id="Author " class="fw-bold">Greenpeace Indonesia</span>
+            By <span id="author" class="fw-bold"></span>
             <i class="bi bi-clock ms-1 me-1"></i>
-            <span id="dateArticle">26 April 2023</span>
+            <span id="date"></span>
           </p>
         </div>
         <div class="col-md-12 p-0 me-4 text-center">
-          <img
-            class="articlesImage img-fluid"
-            src="https://www.greenpeace.org/static/planet4-indonesia-stateless/2023/04/57322f08-lebaran_timbulsloko_2023_aji-styawan-greenpeace-9-1024x683.jpg"
-            alt=""
-          />
+          <img class="articlesImage img-fluid" src="" alt="" id="images" />
         </div>
-        <div id="detailPreviewArticles" class="col-md-12 ps-0 pe-0">
-          <p class="detailArticle1 text-dark">
-            Matahari masih condong di ufuk timur pada Sabtu, 22 April lalu, saat
-            warga mulai meriung di dalam dan sekitar Masjid Darul Ibad, Desa
-            Timbulsloko, Kecamatan Sayung, Demak, Jawa Tengah.
-          </p>
-          <p class="detailArticle2 text-dark">
-            Di atas geladak kayu yang dibangun karena banjir rob menggenangi
-            desa itu, warga menggelar sajadah. Mereka melaksanakan salat
-            Idulfitri 1444 Hijriah.
-          </p>
-          <p class="detailArticle3 text-dark">
-            Beberapa tahun lalu, masjid ini sempat terendam air laut sehingga
-            warga kesulitan untuk salat berjamaah. Pada awal 2020, warga
-            merenovasinya dengan membangun panggung kayu. Setelah renovasi,
-            aktivitas keagamaan Islam pun rutin digelar kembali di masjid
-          </p>
-          <p class="detailArticle4"></p>
-          <p class="detailArticle5"></p>
-          <p class="detailArticle6"></p>
+        <div class="col-md-12 ps-0 pe-0 pt-5">
+          <p id="paragraf1" class="text-dark"></p>
+          <p id="paragraf2" class="text-dark"></p>
+          <p id="paragraf3" class="text-dark"></p>
+          <p id="paragraf4" class="text-dark"></p>
+          <p id="paragraf5" class="text-dark"></p>
+          <p id="paragraf6" class="text-dark"></p>
+          <p id="paragraf7" class="text-dark"></p>
+          <p id="paragraf8" class="text-dark"></p>
+          <p id="paragraf9" class="text-dark"></p>
+          <p id="paragraf10" class="text-dark"></p>
         </div>
-      </div> -->
+      </div>
+    </div>
+
+    <!-- Artikel terkait -->
+    <div class="container p-5">
+      <div class="artikel" id="artikel">
+        <h3 class="text-start mb-3">Artikel Terkait</h3>
+        <div style="border: 0.5px solid #bfbfbf"></div>
+        <div class="row pt-4" id="articlesContent">
+          <div class="col-sm-4 mb-3 pt-4">
+            <div class="card card-artikel">
+              <img
+                src="https://www.linkpicture.com/q/8c133b2d-gp1swig8-510x340_1.jpg"
+                class="card-img-top"
+                alt="artikel"
+              />
+              <div class="card-body">
+                <a class="wrapperLinkTitleArticles" href="#">
+                  <h5 class="card-title">
+                    Rekomendasi Buku Isu Lingkungan untuk Ngabuburead
+                  </h5>
+                </a>
+                <p
+                  class="card-text"
+                  style="color: #595959; text-align: justify"
+                >
+                  Belajar dan mendalami isu lingkungan gak melulu harus dimulai
+                  dengan bacaan yang berat, kok! Berikut daftar tujuh buku
+                  tentang isu lingkungan rekomendasi kami.
+                </p>
+                <p class="fw-bold" style="color: #6f7376">
+                  <span class="author">Sherina Redjo</span>
+                  <span id="dot2"></span>
+                  <span class="date">18 April 2023</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <nav aria-label="Page navigation example">
+          <ul class="pagination">
+            <li class="page-item">
+              <a class="page-link" href="#" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+              </a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+              <a class="page-link" href="#" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Komentar -->
+    <div class="container p-5">
+      <div class="komentar" id="komentar">
+        <h3 class="text-start mb-3">Komentar</h3>
+        <div style="border: 0.5px solid #bfbfbf"></div>
+        <form>
+          <div class="row pt-5">
+            <div class="col-lg-8 col-md-8 col-sm-12 field">
+              <div class="input-group mb-3">
+                <input
+                  type="email"
+                  id="email-value"
+                  class="form-control form-control-md me-2"
+                  placeholder="Masukkan Alamat Email"
+                  required
+                />
+                <input
+                  type="text"
+                  id="name-value"
+                  class="form-control form-control-md"
+                  placeholder="Masukkan Nama"
+                  required
+                />
+              </div>
+              <div class="input-group mb-3">
+                <textarea
+                  id="komentar-value"
+                  class="form-control form-control-md"
+                  placeholder="Tulis Komentar"
+                  style="height: 150px; resize: none"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Add Comment</button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="row pt-4">
+        <div class="posts-list">
+          <div class="card bg-light mt-4" style="width: 50rem">
+            <div class="card-body">
+              <h5 class="card-title">Lalalisa</h5>
+              <h6 class="card-subtitle mb-2 text-body-secondary">
+                09.00 PM <span id="dot2"></span> <span> lala@gmail.com</span>
+              </h6>
+              <p class="card-text text-dark">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <!-- <a href="#" class="card-link">Card link</a>
+            <a href="#" class="card-link">Another link</a> -->
+            </div>
+          </div>
+          <div class="card bg-light mt-4" style="width: 50rem">
+            <div class="card-body">
+              <h5 class="card-title">Lalalisa</h5>
+              <h6 class="card-subtitle mb-2 text-body-secondary">
+                09.00 PM <span id="dot2"></span> <span> lala@gmail.com</span>
+              </h6>
+              <p class="card-text text-dark">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <!-- <a href="#" class="card-link">Card link</a>
+            <a href="#" class="card-link">Another link</a> -->
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- Footer -->
@@ -185,6 +305,6 @@
     ></script>
 
     <!-- Script JS -->
-    <script src="./scriptDetailArticlePage.js"></script>
+    <script src="./detailArticle.js"></script>
   </body>
 </html>
