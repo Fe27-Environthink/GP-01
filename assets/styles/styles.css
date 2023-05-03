@@ -19,6 +19,9 @@
   --color-main: #14ae5c;
 }
 
+.bg-main{
+  background-color: #14ae5c;
+}
 /* Navbar */
 nav {
   font-family: "Semibold";
@@ -159,6 +162,7 @@ nav {
 footer {
   font-family: "Semibold";
   background-color: var(--color-main);
+  
 }
 
 .judulDeskripsiEnvironthink {
