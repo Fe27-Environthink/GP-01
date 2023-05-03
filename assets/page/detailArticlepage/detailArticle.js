@@ -11,7 +11,7 @@ fetchDetailArticle
   .then((response) => response.json())
   .then((data) => {
     document.getElementById("cathegory").textContent = data.cathegory;
-    document.getElementById("hashTag").textContent = data.hashTag;
+    document.getElementById("hashTag").textContent = data.hashTag.join(" ");
     document.getElementById("titleArticle").textContent = data.titleArticle;
     document.getElementById("author").textContent = data.author;
     document.getElementById("date").textContent = data.date;
