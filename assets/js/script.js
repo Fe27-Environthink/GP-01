@@ -26,7 +26,7 @@ fetch(endpoint)
                       i
                     ].hashTag.join(" ")}</a>
                 </p>
-                <a class="wrapperLinkTitleArticles" href="/assets/page/detailArticlepage/detailArticle.html?id=${
+                <a class="wrapperLinkTitleArticles" href="../../detailArticle.html?id=${
                   data[i].id
                 }">
                     <h3 class="titleArticles">${data[i].titleArticle}</h3>
