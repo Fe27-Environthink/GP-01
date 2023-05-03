@@ -46,8 +46,11 @@ fetchDetailAksi
 // form petisi
 const formPetisi = document.getElementById("form-petisi");
 const modalPetisi = document.getElementById("modal-petisi");
+const modalError = document.getElementById("modal-email-error");
+
 // modal
 var modalInstance = new bootstrap.Modal(modalPetisi);
+var modalErr = new bootstrap.Modal(modalError);
 // mengambil form inputan
 const checkPetisi = document.getElementById("flexCheckDefault");
 const inputNama = document.getElementById("namaLengkap");
@@ -75,36 +78,51 @@ formPetisi.addEventListener("submit", (event) => {
     var dataAksi = {
       jumlahDukungan: jumlah + 1,
     };
-
-    fetch(urlAksi, {
-      method: "PUT",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(dataAksi),
-    });
-
-    fetch(url, {
-      method: "POST",
-
-      headers: {
-        "Content-Type": "application/json",
-      },
-
-      body: JSON.stringify(data),
-    })
+    //  pengecekan email yang sama
+    fetch(url)
       .then((response) => response.json())
-      .then((data) => console.log(data))
-      .catch((error) => console.error(error));
+      .then((kontributor) => {
+        const email = kontributor.find(
+          (email) => email.email === inputanEmail.value
+        );
+        if (email) {
+          //menampilkan modal error
+          modalErr.show();
+          setTimeout(function () {
+            modalErr.hide();
+           
+          }, 3000);
+        } else {
+          fetch(urlAksi, {
+            method: "PUT",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(dataAksi),
+          });
 
-    modalInstance.show();
-    setTimeout(function () {
-      modalInstance.hide();
-      window.location.href = window.location.href;
-    }, 1000);
+          fetch(url, {
+            method: "POST",
+
+            headers: {
+              "Content-Type": "application/json",
+            },
+
+            body: JSON.stringify(data),
+          })
+            .then((response) => response.json())
+            .then((data) => console.log(data))
+            .catch((error) => console.error(error));
+
+          modalInstance.show();
+          setTimeout(function () {
+            modalInstance.hide();
+            window.location.href = window.location.href;
+          }, 1000);
+        }
+      });
   }
 });
-
 
 // form validation
 function formValidation() {
