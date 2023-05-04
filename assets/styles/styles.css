@@ -36,6 +36,20 @@ nav {
   color: var(--color-bg) !important;
 }
 
+.banner {
+  height: 80vh;
+  background: url(../images/imageHighlight1.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.banner-content {
+  height: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
 /* Content */
 
 .wrapperHighlight {
@@ -68,7 +82,7 @@ nav {
 .btnHighlight1 {
   background-color: var(--color-main) !important;
   color: var(--color-bg) !important;
-  padding: 0.7em 4em !important;
+  padding: 0.6em 3em !important;
   font-family: "Semibold" !important;
 }
 
@@ -145,17 +159,6 @@ nav {
 .imgBtnHighlight2 {
   width: 6.5em;
   margin-bottom: 1em;
-}
-
-.btnArtikelLainnya {
-  font-family: "Semibold" !important;
-  color: #14ae5c !important;
-  outline: 2px solid #14ae5c;
-}
-
-.btnArtikelLainnya:hover {
-  background-color: #14ae5c !important;
-  color: white !important;
 }
 
 /* Footer */
