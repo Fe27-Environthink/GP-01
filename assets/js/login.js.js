@@ -17,9 +17,9 @@ loginForm.addEventListener('submit', (event) => {
       console.log(user);
 
       if (user) {
-        localStorage.setItem('user', JSON.stringify(user.username));
+        localStorage.setItem('user', user.username);
     localStorage.setItem('isLoggedIn', true);
-    localStorage.setItem('avatar',JSON.stringify(user.avatar))
+    localStorage.setItem('avatar',user.avatar)
 
     // Redirect ke halaman utama
     window.location.href = 'index.html';
