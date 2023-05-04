@@ -23,8 +23,8 @@
   </head>
   <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg">
-      <div class="container d-flex justify-content-between">
+    <nav class="navbar navbar-expand-lg d-flex flex-column justify-content-between shadow sticky-top bg-white">
+      <div class="container">
         <a class="navbar-brand" href="#"
           ><img
             src="./assets/images/logo.png"
@@ -49,13 +49,15 @@
         >
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link active" aria-current="page" href="index.html"
+                >Home</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="#">Aksi</a>
+              <a class="nav-link active" href="aksi.html">Aksi</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="#">Artikel</a>
+              <a class="nav-link active" href="article.html">Artikel</a>
             </li>
             <li class="nav-item mt-1 mb-2 ms-3 me-4">
               <a class="" href="#"
@@ -72,8 +74,102 @@
       </div>
     </nav>
 
+    <!-- Highlight 1 -->
+    <!-- <div class="wrapperHighlight pt-5">
+      <div class="container">
+        <div class="wrapperHighlight1Content ms-2 me-2">
+          <h1 class="titleHighlight1 text-white">
+            Satu langkah kecil untuk lingkungan, satu lompatan besar untuk bumi
+          </h1>
+          <p class="subTitleHighlight1 mt-4 mb-4">
+            Jangan tunggu sampai terlambat, mari kita bertindak sekarang untuk
+            menyelamatkan planet kita.
+          </p>
+          <a class="btn btnHighlight1 mb-5" href="aksi.html">Ikuti Aksi</a>
+        </div>
+      </div>
+    </div> -->
+
+    <div class="container-fluid banner">
+      <div class="container banner-content col-lg-9">
+        <div>
+          <h1 class="titleHighlight1 text-white">
+            Satu langkah kecil untuk lingkungan, satu <br> lompatan besar untuk bumi
+          </h1>
+          <p class="subTitleHighlight1 mt-4 mb-4 fw-bold fs-5">Jangan tunggu sampai terlambat, mari kita bertindak <br>sekarang untuk
+            menyelamatkan planet kita.</p>
+          <a class="btn btnHighlight1 mb-5" href="aksi.html">Ikuti Aksi</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Judul Title Article -->
+    <div
+      class="container d-flex flex-column justify-content-center align-items-center text-center"
+    >
+      <h3 class="titleNewArticle mt-5 text-center">Artikel Terbaru</h3>
+      <hr class="lineArticle text-center opacity-100" />
+    </div>
+
+    <!-- Konten -->
     <div class="container">
-      <h1 class="text-center mt-5 mb-5">ISI KONTEN NYA</h1>
+      <div class="articlesContent" id="articlesContent">
+      </div>
+      <div class="d-flex justify-content-start ms-1">
+        <button class="btn btn-outline-success" id="artikel-lainnya">Artikel Lainnya</button>
+      </div>
+    </div>
+
+    <!-- Highlight 2-->
+    <div class="Highlight2 text-center mt-5">
+      <h1 class="titleHighlight2 text-white pt-5">Menjadi Aktivis Digital</h1>
+      <p class="subTitleHighlight2 text-white pb-5 me-3 ms-3">
+        Jangan biarkan suaramu hilang di kerumunan jadilah aktivis digital dan
+        berikan pengaruhmu pada dunia
+      </p>
+      <div class="container">
+        <div class="row justify-content-center gap-3 gap-md-5 pb-5 ms-3 me-3">
+          <div class="col-12 col-md-3">
+            <a href="#" type="button"
+              ><img
+                class="imgBtnHighlight2"
+                src="./assets/images/infoLogo.png"
+                alt="Pelajari!"
+            /></a>
+            <h2 class="titleBtnHighlight2 text-white">Pelajari Isunya</h2>
+            <p class="subTitleBtnHighlight2">
+              Pengetahuan adalah kunci untuk melindungi Bumi dengan lebih tepat
+              dan efektif. Mari bersama-sama pelajari isunya
+            </p>
+          </div>
+          <div class="col-12 col-md-3">
+            <a href="#" type="button">
+              <img
+                class="imgBtnHighlight2"
+                src="./assets/images/shareLogo.png"
+                alt="Share!"
+            /></a>
+            <h2 class="titleBtnHighlight2 text-white">Bagikan Kampanyenya</h2>
+            <p class="subTitleBtnHighlight2">
+              Pengetahuan adalah kunci untuk melindungi Bumi dengan lebih tepat
+              dan efektif. Mari bersama-sama pelajari isunya
+            </p>
+          </div>
+          <div class="col-12 col-md-3">
+            <a href="#" type="button"
+              ><img
+                class="imgBtnHighlight2"
+                src="./assets/images/peopleLogo.png"
+                alt="Aktivis"
+            /></a>
+            <h2 class="titleBtnHighlight2 text-white">Lakukan Aksi</h2>
+            <p class="subTitleBtnHighlight2">
+              Pengetahuan adalah kunci untuk melindungi Bumi dengan lebih tepat
+              dan efektif. Mari bersama-sama pelajari isunya
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- Footer -->
@@ -123,14 +219,14 @@
             ></a>
           </div>
         </div>
-        <hr id="copyRightLine" class="mb-2" />
-        <div class="row">
+        <hr class="mb-2 opacity-100 border border-white" />
+        <div class="row pb-0 pb-md-3">
           <div class="col-sm-12 col-md-6 text-white">
             Copyright &#169; 2023. Greenpeace. All Right Reserved.
           </div>
           <div
             id="country"
-            class="col-sm-12 col-md-6 text-md-end text-sm-start text-white"
+            class="col-sm-12 col-md-6 text-center text-md-end mb-5 mb-md-0 text-white"
           >
             Indonesia
           </div>
@@ -144,5 +240,8 @@
       integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
       crossorigin="anonymous"
     ></script>
+
+    <!-- Script JS -->
+    <script src="./assets/js/script.js"></script>
   </body>
 </html>
