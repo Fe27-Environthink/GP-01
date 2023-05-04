@@ -41,7 +41,12 @@ nav {
 .inputSearch:focus {
   border: 2px solid var(--color-main) !important;
 }
+.btnDonasi {
+  background-color: var(--color-main) !important;
+  color: var(--color-bg) !important;
+}
 
+/* Cari Button */
 .btnCari {
   /* padding: 0.4em 2.5em !important; */
   font-family: "Semibold" !important;
