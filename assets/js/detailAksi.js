@@ -46,11 +46,8 @@ fetchDetailAksi
 // form petisi
 const formPetisi = document.getElementById("form-petisi");
 const modalPetisi = document.getElementById("modal-petisi");
-const modalError = document.getElementById("modal-email-error");
-
 // modal
 var modalInstance = new bootstrap.Modal(modalPetisi);
-var modalErr = new bootstrap.Modal(modalError);
 // mengambil form inputan
 const checkPetisi = document.getElementById("flexCheckDefault");
 const inputNama = document.getElementById("namaLengkap");
@@ -86,13 +83,10 @@ formPetisi.addEventListener("submit", (event) => {
           (email) => email.email === inputanEmail.value
         );
         if (email) {
-          //menampilkan modal error
-          modalErr.show();
-          setTimeout(function () {
-            modalErr.hide();
-           
-          }, 3000);
+          
+          showError("Email sudah digunakan !","Silahkan gunakan email yang lain untuk menandatangai petisi ini")
         } else {
+          // menyimpan data kontributor ke api dan mengupdate data petisi
           fetch(urlAksi, {
             method: "PUT",
             headers: {
@@ -124,6 +118,21 @@ formPetisi.addEventListener("submit", (event) => {
   }
 });
 
+// fungsi popup modal error
+function showError(heading,pesan) {
+    const Err = document.getElementById("modal-error");
+    var showErr = new bootstrap.Modal(Err);
+    const pesanErr = document.getElementById("pesan-error")
+    const headingErr = document.getElementById("heading-error")
+    headingErr.textContent = heading;
+    pesanErr.textContent = pesan;
+    
+    showErr.show();
+          setTimeout(function () {
+            showErr.hide();
+          }, 3000);
+}
+
 // form validation
 function formValidation() {
   let valid = true;
@@ -131,6 +140,16 @@ function formValidation() {
   if (!checkPetisi.checked) {
     valid = false;
     console.log("belum dicentang");
+  }
+
+  // mengecek apakah user sudah login saat mensubmit petisi
+  const isLoggedIn = localStorage.getItem("isLoggedIn");
+  if (!isLoggedIn) {
+    showError("Akses ditolak: Login dibutuhkan","Silahkan Login untuk dapat mengisi petisi")
+    valid = false;
+    
+  } else {
+    valid = true;
   }
   // else{
   //     console.log("sukes  dicetak");

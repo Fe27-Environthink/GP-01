@@ -31,7 +31,7 @@
   <body>
     <!-- Navbar -->
     <nav
-      class="navbar bg-white navbar-expand-lg d-flex flex-column justify-content-between shadow fixed-top"
+      class="navbar navbar-expand-lg d-flex flex-column justify-content-between shadow sticky-top bg-white"
     >
       <div class="container">
         <a class="navbar-brand" href="./index.html"
@@ -58,7 +58,7 @@
         >
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html"
+              <a class="nav-link active" aria-current="page" href="./index.html"
                 >Home</a
               >
             </li>
@@ -69,15 +69,23 @@
               <a class="nav-link active" href="article.html">Artikel</a>
             </li>
             <li class="nav-item mt-1 mb-2 ms-3 me-4">
-              <a class="" href="./searchPage.html">
-                <i id="searchIcon" class="bi bi-search fs-5 text-dark"></i>
-              </a>
+              <a class="" href="./searchPage.html"
+                ><i id="searchIcon" class="bi bi-search fs-5 text-dark"></i
+              ></a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item m-1">
               <a class="btnDonasi btn nav-link active ps-3 pe-3" href="#"
                 >Donasi</a
               >
             </li>
+            
+              <li class="nav-item " >
+                <div id="button-login">
+                <a class="btnDonasi m-1 btn nav-link active ps-3 pe-3" href="login.html"
+                  >login</a>
+                </div>
+              </li>
+          
           </ul>
         </div>
       </div>
@@ -174,5 +182,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="./assets/js/aksi.js"></script>
+    <script src="./assets/js/isLogin.js"></script>
   </body>
 </html>
