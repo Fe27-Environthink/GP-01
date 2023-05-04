@@ -23,7 +23,7 @@ fetchAksi
   
         aksiList.innerHTML +=`
         <div class="col-md-4 col-sm-6 mb-4 ">
-            <div class="card" >
+            <div class="card h-100" >
                 <img src="${data[i].image}" class="card-img-top" alt="...">
                 <div class="card-body">
                   <h6 class="card-title">${data[i].nama}</h6>
@@ -57,7 +57,7 @@ fetchAksi
              }
             aksiList.innerHTML +=`
             <div class="col-md-4 col-sm-6 mb-4 ">
-            <div class="card" >
+            <div class="card h-100" >
                 <img src="${data[i].image}" class="card-img-top" alt="...">
                 <div class="card-body">
                   <h6 class="card-title">${data[i].nama}</h6>
