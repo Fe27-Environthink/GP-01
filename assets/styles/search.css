@@ -4,6 +4,11 @@
   src: url(../font/static/PlusJakartaSans-SemiBold.ttf);
 }
 
+@font-face {
+  font-family: "Regular";
+  src: url(../font/static/PlusJakartaSans-Regular.ttf);
+}
+
 :root {
   --color-bg: #ffffff;
   --color-main: #14ae5c;
@@ -25,8 +30,30 @@ nav {
   background-color: #6f7376;
   border-radius: 50%;
   display: inline-block;
+  margin: 0 0.3em;
 }
 
+/* Search */
+.inputSearch {
+  font-family: "Regular";
+}
+
+.inputSearch:focus {
+  border: 2px solid var(--color-main) !important;
+}
+.btnDonasi {
+  background-color: var(--color-main) !important;
+  color: var(--color-bg) !important;
+}
+
+/* Cari Button */
+.btnCari {
+  /* padding: 0.4em 2.5em !important; */
+  font-family: "Semibold" !important;
+  background-color: var(--color-main) !important;
+}
+
+/* Search Result Article */
 .wrapperLinkTitleArticles {
   cursor: pointer;
   color: black;
@@ -41,42 +68,18 @@ nav {
   text-decoration-color: black;
 }
 
-.btnDonasi {
-  background-color: var(--color-main) !important;
-  color: var(--color-bg) !important;
+.wrapperNotFound {
+  background-color: #f1f1f1;
 }
 
-#artikel {
-  padding-top: 4rem;
+.titleNotFoundArticle {
+  font-family: "Semibold";
 }
 
-.card-artikel {
-  cursor: pointer;
-  background: #ffffff;
-  border: 1px solid #d9d9d9;
-  box-shadow: 0px 8px 24px rgba(112, 144, 176, 0.15);
-  border-radius: 8px;
-  padding-bottom: 10px;
+.possibleNotFoundKeyword1,
+.possibleNotFoundKeyword2 {
+  font-family: "Semibold";
 }
-
-.card-artikel:hover {
-  cursor: pointer;
-  box-shadow: 0px 8px 28px rgba(1, 1, 1, 0.15);
-  border-radius: 8px;
-}
-
-.card-infografis {
-  background: #ffffff;
-  border: 1px solid #d9d9d9;
-  box-shadow: 0px 8px 24px rgba(112, 144, 176, 0.15);
-  border-radius: 8px;
-}
-
-.card-infografis:hover {
-  box-shadow: 0px 8px 28px rgba(1, 1, 1, 0.15);
-  border-radius: 8px;
-}
-
 /* Footer */
 footer {
   font-family: "Semibold";
@@ -105,5 +108,11 @@ footer {
 
   #country {
     margin-top: 0.2em;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  footer {
+    margin-top: 10.5em;
   }
 }
