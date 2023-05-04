@@ -79,30 +79,3 @@ numbers.forEach(function (number) {
     displayedNumbers.push(number);
   }
 });
-
-// searchArticle();
-// const obj = [
-//   {
-//     name: "John Doe",
-//     age: 30,
-//     occupation: "developer adalah makanan yang enak dan lezat",
-//   },
-//   {
-//     name: "John Doedas",
-//     age: 20,
-//     occupation:
-//       "Depok merupakan salah satu kota metropolitan Jabodetabek yang cukup maju dan memiliki banyak tempat wisata",
-//   },
-//   {
-//     name: "John Feng",
-//     age: 23,
-//     occupation:
-//       "Supaya tidak bingung pilih makanan enak di Depok, cek dulu deh rekomendasi tempat makan di Depok berikut ini.",
-//   },
-// ];
-
-// const searchTerm = "at";
-
-// const result = obj.filter((obj) => obj.occupation.includes(searchTerm));
-
-// console.log(result);
