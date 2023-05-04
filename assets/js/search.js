@@ -69,13 +69,3 @@ const searchArticle = () => {
 };
 
 btnCari.addEventListener("click", searchArticle);
-
-let numbers = [1, 2, 3, 4, 3, 5, 6, 7];
-let displayedNumbers = [];
-
-numbers.forEach(function (number) {
-  if (displayedNumbers.indexOf(number) === -1) {
-    console.log(number);
-    displayedNumbers.push(number);
-  }
-});
