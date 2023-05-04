@@ -1,0 +1,109 @@
+const article = document.getElementById("articlesContent");
+const inputValue = document.getElementById("inputSearchArticle");
+const btnCari = document.getElementById("btnCari");
+
+const endpoint = "https://644b56f917e2663b9ded34b8.mockapi.io/article";
+
+const searchArticle = () => {
+  // console.log(inputValue.value);
+  fetch(endpoint)
+    .then((response) => {
+      return response.json();
+    })
+    .then((data) => {
+      console.log(inputValue.value);
+      // console.log(data);
+      const searchResult = data.filter((obj) =>
+        obj.titleArticle.includes(inputValue.value)
+      );
+
+      console.log(searchResult);
+      if (searchResult.length == 0 || inputValue.value == "") {
+        article.innerHTML = "";
+        article.innerHTML += `
+          <div class="wrapperNotFound col-md-6 col-11 mx-auto mb-5 pt-3 pb-5 ps-4 pe-4">
+            <p class="titleNotFoundArticle text-dark mb-2">
+              Maaf, kami tidak dapat menemukan apa yang anda cari.
+            </p>
+            <ul class="bg-dangesr m-0">
+              <li class="possibleNotFoundKeyword1 text-secondary">
+                Cek kesalahan dalam penulisan, dan coba pencarian lagi
+              </li>
+              <li class="possibleNotFoundKeyword2 text-secondary">
+                Coba lakukan pencarian lain
+              </li>
+            </ul>
+          </div>
+        `;
+      } else {
+        article.innerHTML = "";
+        searchResult.map((datas, indexs) => {
+          article.innerHTML += `
+          <div class="col-sm-4 mb-3 pt-4">
+            <div class="card card-artikel">
+              <img
+                src="${datas.images}"
+                class="card-img-top"
+                alt="artikel"
+              />
+              <div class="card-body">
+                <a
+                  class="wrapperLinkTitleArticles"
+                  href="detailArticle.html?id=${indexs + 1}"
+                >
+                  <h5 class="card-title">${datas.titleArticle}</h5>
+                </a>
+                <p class="card-text" style="color: #595959; text-align: justify">
+                  ${datas.descArticle}
+                </p>
+                <p class="fw-bold" style="color: #6f7376">
+                  <span class="author">${datas.author}</span>
+                  <span id="dot2"></span>
+                  <span class="date">${datas.date}</span>
+                </p>
+              </div>
+            </div>
+          </div>`;
+        });
+      }
+    });
+};
+
+btnCari.addEventListener("click", searchArticle);
+
+let numbers = [1, 2, 3, 4, 3, 5, 6, 7];
+let displayedNumbers = [];
+
+numbers.forEach(function (number) {
+  if (displayedNumbers.indexOf(number) === -1) {
+    console.log(number);
+    displayedNumbers.push(number);
+  }
+});
+
+// searchArticle();
+// const obj = [
+//   {
+//     name: "John Doe",
+//     age: 30,
+//     occupation: "developer adalah makanan yang enak dan lezat",
+//   },
+//   {
+//     name: "John Doedas",
+//     age: 20,
+//     occupation:
+//       "Depok merupakan salah satu kota metropolitan Jabodetabek yang cukup maju dan memiliki banyak tempat wisata",
+//   },
+//   {
+//     name: "John Feng",
+//     age: 23,
+//     occupation:
+//       "Supaya tidak bingung pilih makanan enak di Depok, cek dulu deh rekomendasi tempat makan di Depok berikut ini.",
+//   },
+// ];
+
+// const searchTerm = "at";
+
+// const result = obj.filter((obj) => obj.occupation.includes(searchTerm));
+
+// console.log(result);

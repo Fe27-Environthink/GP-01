@@ -80,6 +80,7 @@
         <div class="col-12 col-md-10">
           <div class="input-group mb-3">
             <input
+              id="inputSearchArticle"
               type="text"
               class="inputSearch form-control shadow-none border border-2"
               placeholder="Cari Artikel lainnya!"
@@ -88,7 +89,9 @@
           </div>
         </div>
         <div class="col-12 col-md-2 text-center text-md-start">
-          <button class="btnCari btn text-white w-100">Cari</button>
+          <button id="btnCari" class="btnCari btn text-white w-100">
+            Cari
+          </button>
         </div>
       </div>
     </div>
@@ -96,6 +99,22 @@
     <!-- Hasil Pencarian -->
     <div class="container">
       <div class="row pt-4" id="articlesContent">
+        <!-- <div
+          class="wrapperNotFound col-md-6 col-11 mx-auto mb-5 pt-3 pb-5 ps-4 pe-4"
+        >
+          <p class="titleNotFoundArticle text-dark mb-2">
+            Maaf, kami tidak dapat menemukan apa yang anda cari.
+          </p>
+          <ul class="bg-dangesr m-0">
+            <li class="possibleNotFoundKeyword1 text-secondary">
+              Cek kesalahan dalam penulisan, dan coba pencarian lagi
+            </li>
+            <li class="possibleNotFoundKeyword2 text-secondary">
+              Coba lakukan pencarian lain
+            </li>
+          </ul>
+        </div> -->
+
         <!-- <div class="col-sm-4 mb-3 pt-4">
           <div class="card card-artikel">
             <img
@@ -125,8 +144,8 @@
     </div>
 
     <!-- Footer -->
-    <footer id="footer">
-      <div class="container">
+    <footer id="footer" class="">
+      <div class="container mt-0 mt-md-0">
         <div class="row pt-3">
           <div class="col-sm-12 col-md-5">
             <p class="judulDeskripsiEnvironthink">Environthink</p>
