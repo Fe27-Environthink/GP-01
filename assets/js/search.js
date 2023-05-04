@@ -12,7 +12,6 @@ const searchArticle = () => {
     })
     .then((data) => {
       console.log(inputValue.value);
-      // console.log(data);
       const searchResult = data.filter((obj) =>
         obj.titleArticle.includes(inputValue.value)
       );
