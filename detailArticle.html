@@ -62,7 +62,7 @@
               <a class="nav-link active" href="article.html">Artikel</a>
             </li>
             <li class="nav-item mt-1 mb-2 ms-3 me-4">
-              <a class="" href="#"
+              <a class="" href="./searchPage.html"
                 ><i id="searchIcon" class="bi bi-search fs-5 text-dark"></i
               ></a>
             </li>
@@ -88,7 +88,7 @@
           <p class="text-dark">
             By <span id="author" class="fw-bold"></span>
             <i class="bi bi-clock ms-1 me-1"></i>
-            <span id="date" class="fw-bold" style="color: #6F7376;"></span>
+            <span id="date" class="fw-bold" style="color: #6f7376"></span>
           </p>
         </div>
         <div class="col-md-12 p-0 me-4 text-center">
@@ -166,46 +166,77 @@
     </div>
 
     <!-- Komentar -->
-  <div class="container p-5" >
-    <div class="komentar" id="komentar" >
-      <h3 class="text-start mb-3">Komentar</h3>
-      <div style="border: 0.5px solid #BFBFBF"></div>
-      <form class="add-post-form">
-        <div class="row pt-5">
-          <div class="col-lg-8 col-md-8 col-sm-12 field">
-            <div class="input-group mb-3">
-              <input type="email" id="email-value" class="form-control form-control-md me-2" placeholder="Masukkan Alamat Email" required>
-              <input type="text" id="name-value" class="form-control form-control-md" placeholder="Masukkan Nama" required>
+    <div class="container p-5">
+      <div class="komentar" id="komentar">
+        <h3 class="text-start mb-3">Komentar</h3>
+        <div style="border: 0.5px solid #bfbfbf"></div>
+        <form class="add-post-form">
+          <div class="row pt-5">
+            <div class="col-lg-8 col-md-8 col-sm-12 field">
+              <div class="input-group mb-3">
+                <input
+                  type="email"
+                  id="email-value"
+                  class="form-control form-control-md me-2"
+                  placeholder="Masukkan Alamat Email"
+                  required
+                />
+                <input
+                  type="text"
+                  id="name-value"
+                  class="form-control form-control-md"
+                  placeholder="Masukkan Nama"
+                  required
+                />
+              </div>
+              <div class="input-group mb-3">
+                <textarea
+                  id="komentar-value"
+                  class="form-control form-control-md"
+                  placeholder="Tulis Komentar"
+                  style="height: 150px; resize: none"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Add Comment</button>
             </div>
-            <div class="input-group mb-3">
-                <textarea id="komentar-value" class="form-control form-control-md" placeholder="Tulis Komentar" style="height: 150px; resize: none" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Add Comment</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="row pt-4">
+        <div class="posts-list" id="posts-list"></div>
+      </div>
+    </div>
+
+    <!-- modal komentar berhasil  -->
+    <div
+      class="modal fade"
+      id="modal-komentar"
+      id="staticBackdrop"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body">
+            <center>
+              <img
+                src="https://i.ibb.co/MfRWmMT/5610944.png"
+                class="m-2"
+                width="100px"
+                alt=""
+                srcset=""
+              />
+            </center>
+            <h4 class="text-center">Menambahkan komentar</h4>
           </div>
         </div>
-      </form>
-    </div>
-
-    <div class="row pt-4">
-      <div class="posts-list" id="posts-list">
       </div>
     </div>
-  </div>
-
-  <!-- modal komentar berhasil  -->
-  <div class="modal fade" id="modal-komentar" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog  modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-body">
-          <center>
-          <img src="https://i.ibb.co/MfRWmMT/5610944.png" class="m-2" width="100px" alt="" srcset="">
-        </center>
-         <h4 class="text-center"> Menambahkan komentar</h4>
-        </div>
-     
-      </div>
-    </div>
-  </div>
 
     <!-- Footer -->
     <footer id="footer">
