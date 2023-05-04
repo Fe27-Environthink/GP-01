@@ -9,8 +9,8 @@ fetch(endpoint)
     // menampilkan data dengan index 0-2
     for (let i = 0; i < 3 && i < data.length; i++) {
       article.innerHTML += `
-        <div class="col-sm-4 mb-3 pt-4">
-            <div class="card card-artikel" >
+        <div class="col-md-4 mb-3 pt-4">
+            <div class="card card-artikel h-100" >
                 <img src=${data[i].images} class="card-img-top" alt="artikel">
                 <div class="card-body">
                     <a class="wrapperLinkTitleArticles" href="detailArticle.html?id=${data[i].id}">
@@ -34,8 +34,8 @@ fetch(endpoint)
     btnArtikel.addEventListener("click", () => {
       for (let i = index; i < index + 3 && i < data.length; i++) {
         article.innerHTML += `
-          <div class="col-sm-4 mb-3 pt-4" onclick="detailArticle.html?id=${data[i].id}">
-              <div class="card card-artikel" >
+          <div class="col-md-4 mb-3 pt-4">
+              <div class="card card-artikel h-100" >
                   <img src=${data[i].images} class="card-img-top" alt="artikel">
                   <div class="card-body">
                       <a class="wrapperLinkTitleArticles" href="detailArticle.html?id=${data[i].id}">
