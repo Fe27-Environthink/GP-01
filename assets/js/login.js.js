@@ -18,10 +18,11 @@ loginForm.addEventListener('submit', (event) => {
 
       if (user) {
         localStorage.setItem('user', JSON.stringify(user.username));
-    localStorage.setItem('session', 'login');
+    localStorage.setItem('isLoggedIn', true);
+    localStorage.setItem('avatar',JSON.stringify(user.avatar))
 
     // Redirect ke halaman utama
-    window.location.href = window.location.href;
+    window.location.href = 'index.html';
       } else {
         alert('Username atau password salah.');
       }
