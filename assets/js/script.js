@@ -17,8 +17,8 @@ fetch(endpoint)
                     alt=""
                 />
             </div>
-            <div id="detailPreviewArticles" class="col-md-7 ps-0 pe-0 mt-3">
-                <p class="hashTag mb-1 mt-2 p-0">
+            <div id="detailPreviewArticles" class="col-md-7 ps-0 pe-0 mt-2">
+                <p class="hashTag mb-1  p-0">
                     <span id="category">${
                       data[i].cathegory
                     }</span> <span id="dot"></span>
@@ -44,13 +44,13 @@ fetch(endpoint)
         </div>`;
     }
 
-    let btnArtikel= document.getElementById("artikel-lainnya");
+    let btnArtikel = document.getElementById("artikel-lainnya");
 
     console.log(btnArtikel);
-    let index=3
+    let index = 3;
     // menambahkan 3 artikel setiap menekan tombol artikel lainnya
-    btnArtikel.addEventListener("click",()=>{
-        for (let i = index; i < index+3 &&  i < data.length; i++) {
+    btnArtikel.addEventListener("click", () => {
+      for (let i = index; i < index + 3 && i < data.length; i++) {
         article.innerHTML += `
         <div class="row ms-1 me-1 mt-5 mb-5">
             <div class="col-md-4 p-0 me-4">
@@ -85,12 +85,12 @@ fetch(endpoint)
                 </p>
             </div>
         </div>`;
-        }
-        index=index+3
-        if (index >= data.length) {
-        btnArtikel.style.visibility="hidden"
       }
-    })
+      index = index + 3;
+      if (index >= data.length) {
+        btnArtikel.style.visibility = "hidden";
+      }
+    });
   });
 
 // let article = document.getElementById("articlesContent");
