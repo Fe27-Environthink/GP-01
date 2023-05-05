@@ -39,7 +39,7 @@ const searchArticle = () => {
         searchResult.map((datas, indexs) => {
           article.innerHTML += `
           <div class="col-12 col-sm-12 col-md-6 col-lg-4 mb-3 pt-4">
-            <div class="card card-artikel">
+            <div class="card card-artikel h-100">
               <img
                 src="${datas.images}"
                 class="card-img-top"
