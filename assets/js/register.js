@@ -1,26 +1,4 @@
-// $(document).ready(function() {
-//     $('#register-form').submit(function(e) {
-//       e.preventDefault();
-//       var formdata = new FormData(this);
-//       $.ajax({
-//         url: 'https://mockapi.io/api/v1/users',
-//         method: 'POST',
-//         data: formdata,
-//         contentType: false,
-//         processData: false,
-//         success: function(response) {
-//           console.log(response);
-//           alert('Registration success');
-//           // redirect to login page or do something else
-//         },
-//         error: function(error) {
-//           console.log(error);
-//           alert('Registration failed');
-//         }
-//       });
-//     });
-//   });
-
+ 
 const register=document.getElementById("register-form")
 const inputNama = document.getElementById("username")
 const inputEmail = document.getElementById("email")
