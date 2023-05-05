@@ -17,11 +17,15 @@ loginForm.addEventListener('submit', (event) => {
       console.log(user);
 
       if (user) {
-        localStorage.setItem('user', JSON.stringify(user.username));
-    localStorage.setItem('session', 'login');
+        localStorage.setItem('user', user.username);
+    localStorage.setItem('isLoggedIn', true);
+    localStorage.setItem('avatar',user.avatar)
+    localStorage.setItem('email',user.email)
+    localStorage.setItem('telp',user.telp)
+    localStorage.setItem('city',user.address)
 
     // Redirect ke halaman utama
-    window.location.href = window.location.href;
+    window.location.href = 'index.html';
       } else {
         alert('Username atau password salah.');
       }
