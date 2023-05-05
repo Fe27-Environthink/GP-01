@@ -38,7 +38,7 @@ const searchArticle = () => {
         article.innerHTML = "";
         searchResult.map((datas, indexs) => {
           article.innerHTML += `
-          <div class="col-sm-4 mb-3 pt-4">
+          <div class="col-12 col-sm-12 col-md-6 col-lg-4 mb-3 pt-4">
             <div class="card card-artikel">
               <img
                 src="${datas.images}"
@@ -50,7 +50,7 @@ const searchArticle = () => {
                   class="wrapperLinkTitleArticles"
                   href="detailArticle.html?id=${indexs + 1}"
                 >
-                  <h5 class="card-title">${datas.titleArticle}</h5>
+                  <h5 class="card-title text-break">${datas.titleArticle}</h5>
                 </a>
                 <p class="card-text" style="color: #595959; text-align: justify">
                   ${datas.descArticle}

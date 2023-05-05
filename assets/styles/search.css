@@ -68,6 +68,12 @@ nav {
   text-decoration-color: black;
 }
 
+.card-text {
+  /* word-break: break-word; */
+  /* word-wrap: break-word; */
+  /* word-spacing: 1px; */
+}
+
 .wrapperNotFound {
   background-color: #f1f1f1;
 }
