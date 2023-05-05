@@ -147,6 +147,19 @@ nav {
   display: inline-block;
 }
 
+#artikel-lainnya {
+  border: 2px solid var(--color-main) !important;
+  font-family: "Semibold";
+  color: var(--color-main) !important;
+}
+
+#artikel-lainnya:hover {
+  background-color: #14ae5c;
+  border: 2px solid var(--color-main) !important;
+  font-family: "Semibold";
+  color: var(--color-bg) !important;
+}
+
 .Highlight2 {
   background-image: url(../images/Highlight2.png);
   height: auto;

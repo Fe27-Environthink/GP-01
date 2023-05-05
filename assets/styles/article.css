@@ -27,6 +27,21 @@ nav {
   display: inline-block;
 }
 
+#artikel-lainnya,
+#infografis-lainnya {
+  border: 2px solid var(--color-main) !important;
+  font-family: "Semibold";
+  color: var(--color-main) !important;
+}
+
+#artikel-lainnya:hover,
+#infografis-lainnya:hover {
+  background-color: #14ae5c;
+  border: 2px solid var(--color-main) !important;
+  font-family: "Semibold";
+  color: var(--color-bg) !important;
+}
+
 .wrapperLinkTitleArticles {
   cursor: pointer;
   color: black;
