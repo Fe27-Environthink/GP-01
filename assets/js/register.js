@@ -1,5 +1,4 @@
- 
-const register=document.getElementById("register-form")
+ const register=document.getElementById("register-form")
 const inputNama = document.getElementById("username")
 const inputEmail = document.getElementById("email")
 const inputPassword = document.getElementById("password")
@@ -14,7 +13,6 @@ register.addEventListener("submit",(e)=>{
         address: inputKota.value,
         telp: inputTelepon.value,
         avatar:"./assets/images/unknown.png"
-
       };
     const urlUser="https://6451afe5a2860c9ed4f8f500.mockapi.io/users"
       fetch(urlUser, {

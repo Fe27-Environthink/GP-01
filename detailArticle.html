@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Environthink</title>
+
     <!-- Link CSS -->
     <link rel="stylesheet" href="./assets/styles/detailArticle.css" />
 
@@ -71,7 +72,6 @@
                 >Donasi</a
               >
             </li>
-
             <li class="nav-item">
               <div id="button-login">
                 <a
@@ -87,7 +87,7 @@
     </nav>
 
     <!-- Konten -->
-    <div id="articlesContent" class="container pt-5">
+    <div id="articlesContent" class="container">
       <div class="row ms-1 me-1 mt-5">
         <div class="col-md 12 mb-3">
           <p class="hashTag m-0 p-0">
@@ -104,7 +104,7 @@
         <div class="col-md-12 p-0 me-4 text-center">
           <img class="articlesImage img-fluid" src="" alt="" id="images" />
         </div>
-        <div class="col-md-12 ps-0 pe-0 pt-5">
+        <div class="paragraf col-md-12 ps-0 pe-0 pt-5">
           <p id="paragraf1" class="text-dark"></p>
           <p id="paragraf2" class="text-dark"></p>
           <p id="paragraf3" class="text-dark"></p>
@@ -116,62 +116,6 @@
           <p id="paragraf9" class="text-dark"></p>
           <p id="paragraf10" class="text-dark"></p>
         </div>
-      </div>
-    </div>
-
-    <!-- Artikel terkait -->
-    <div class="container p-5">
-      <div class="artikel" id="artikel">
-        <h3 class="text-start mb-3">Artikel Terkait</h3>
-        <div style="border: 0.5px solid #bfbfbf"></div>
-        <div class="row pt-4" id="articlesContent">
-          <div class="col-sm-4 mb-3 pt-4">
-            <div class="card card-artikel">
-              <img
-                src="https://www.linkpicture.com/q/8c133b2d-gp1swig8-510x340_1.jpg"
-                class="card-img-top"
-                alt="artikel"
-              />
-              <div class="card-body">
-                <a class="wrapperLinkTitleArticles" href="#">
-                  <h5 class="card-title">
-                    Rekomendasi Buku Isu Lingkungan untuk Ngabuburead
-                  </h5>
-                </a>
-                <p
-                  class="card-text"
-                  style="color: #595959; text-align: justify"
-                >
-                  Belajar dan mendalami isu lingkungan gak melulu harus dimulai
-                  dengan bacaan yang berat, kok! Berikut daftar tujuh buku
-                  tentang isu lingkungan rekomendasi kami.
-                </p>
-                <p class="fw-bold" style="color: #6f7376">
-                  <span class="author">Sherina Redjo</span>
-                  <span id="dot2"></span>
-                  <span class="date">18 April 2023</span>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <nav aria-label="Page navigation example">
-          <ul class="pagination">
-            <li class="page-item">
-              <a class="page-link" href="#" aria-label="Previous">
-                <span aria-hidden="true">&laquo;</span>
-              </a>
-            </li>
-            <li class="page-item"><a class="page-link" href="#">1</a></li>
-            <li class="page-item"><a class="page-link" href="#">2</a></li>
-            <li class="page-item"><a class="page-link" href="#">3</a></li>
-            <li class="page-item">
-              <a class="page-link" href="#" aria-label="Next">
-                <span aria-hidden="true">&raquo;</span>
-              </a>
-            </li>
-          </ul>
-        </nav>
       </div>
     </div>
 
@@ -247,38 +191,39 @@
         </div>
       </div>
     </div>
-<!-- modal error  -->
-<div
-class="modal fade"
-id="modal-error"
-data-bs-backdrop="static"
-data-bs-keyboard="false"
-tabindex="-1"
-aria-labelledby="staticBackdropLabel"
-aria-hidden="true"
->
-<div class="modal-dialog modal-dialog-centered">
-  <div class="modal-content">
-    <div class="modal-body">
-      <center>
-        <img
-          src="https://i.ibb.co/zJW1452/6276642.png"
-          class="m-2"
-          width="100px"
-          alt=""
-          srcset=""
-        />
-      
-      <h4 class="text-center" id="heading-error"> !</h4>
-      <p class="text-secondary" id="pesan-error">
-        silahkan gunakan email yang lain untuk menandatangai petisi ini
-      </p>
-    </center>
+    
+  <!-- modal error  -->
+    <div
+      class="modal fade"
+      id="modal-error"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body">
+            <center>
+              <img
+                src="https://i.ibb.co/zJW1452/6276642.png"
+                class="m-2"
+                width="100px"
+                alt=""
+                srcset=""
+              />
+            
+            <h4 class="text-center" id="heading-error"> !</h4>
+            <p class="text-secondary" id="pesan-error">
+              silahkan gunakan email yang lain untuk menandatangai petisi ini
+            </p>
+          </center>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
-</div>
-    <!-- Footer -->
+  <!-- Footer -->
     <footer id="footer">
       <div class="container">
         <div class="row pt-3">

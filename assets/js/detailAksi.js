@@ -1,8 +1,6 @@
 const detailAksi = document.getElementById("aksi");
-
 const urlParams = new URLSearchParams(window.location.search);
 const aksiId = urlParams.get("id");
-// console.log(aksiId);
 const fetchDetailAksi = fetch(
   `https://64506cd6e1f6f1bb22977ba9.mockapi.io/aksi/${aksiId}`
 );
@@ -29,8 +27,6 @@ fetchDetailAksi
       desc = "belum ada dukungan";
     }
 
-  
-    
     document.getElementById("title").textContent = data.nama;
     document.getElementById("image").src = data.image;
     document.getElementById("paragraf1").textContent = data.paragraf1;
@@ -46,10 +42,7 @@ fetchDetailAksi
     document.getElementById("bar-petisi").style.width = Persentase + "%";
   });
 
-
-
 // modal
-
 const modalPetisi = document.getElementById("modal-petisi");
 var modalInstance = new bootstrap.Modal(modalPetisi);
 // form petisi
@@ -61,7 +54,6 @@ const inputanEmail = document.getElementById("email");
 const inputanTelepon = document.getElementById("nomorTelepone");
 const inputanKota = document.getElementById("kota");
 
-  
   // mengambil data user dari local storage
 inputNama.addEventListener("click",(event)=>{
   event.preventDefault()
@@ -76,9 +68,6 @@ inputNama.addEventListener("click",(event)=>{
     inputanEmail.value = email;
     inputanTelepon.value = nomor;
     inputanKota.value = kota;
-
-
-    
   }
 })
 // mengirim hasil inputan ke api
@@ -127,7 +116,6 @@ formPetisi.addEventListener("submit", (event) => {
             headers: {
               "Content-Type": "application/json",
             },
-
             body: JSON.stringify(data),
           })
             .then((response) => response.json())
@@ -152,7 +140,7 @@ function showError(heading,pesan) {
     const headingErr = document.getElementById("heading-error")
     headingErr.textContent = heading;
     pesanErr.textContent = pesan;
-    
+
     showErr.show();
           setTimeout(function () {
             showErr.hide();
@@ -167,14 +155,11 @@ function formValidation() {
     valid = false;
     console.log("belum dicentang");
   }
-
   // mengecek apakah user sudah login saat mensubmit petisi
   const isLoggedIn = localStorage.getItem("isLoggedIn");
   if (!isLoggedIn) {
     showError("Akses ditolak: Login dibutuhkan","Silahkan Login untuk dapat mengisi petisi")
     valid = false;
-    
   }
- 
   return valid;
 }

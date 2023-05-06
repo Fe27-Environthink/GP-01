@@ -64,9 +64,6 @@ emailValue.addEventListener("click",(event)=>{
     if (isLoggedIn) {
         nameValue.value = nama;
       emailValue.value = email;
-      
-  
-      
     }
   })
 
@@ -88,7 +85,6 @@ const renderPosts = (posts) => {
 
 // Get dan Read posts
 // GET
-
 fetch(endpoint)
     .then((res) => {
         return res.json();
@@ -99,7 +95,6 @@ fetch(endpoint)
 // POST
 addPostForm.addEventListener('submit', (e) => {
     e.preventDefault();
-
   // mengecek apakah user sudah login saat mensubmit petisi
   const isLoggedIn = localStorage.getItem("isLoggedIn");
   if (!isLoggedIn) {
@@ -129,8 +124,5 @@ addPostForm.addEventListener('submit', (e) => {
             window.location.href = window.location.href;
           }, 1000);
         })
-
   }
-
-   
 })

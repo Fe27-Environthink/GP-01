@@ -6,7 +6,6 @@ const passwordInput = document.querySelector('#password');
 
 loginForm.addEventListener('submit', (event) => {
   event.preventDefault();
-
   const username = usernameInput.value;
   const password = passwordInput.value;
 
