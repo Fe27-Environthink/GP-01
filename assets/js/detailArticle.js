@@ -33,12 +33,39 @@ const addPostForm = document.querySelector('.add-post-form');
 
 // modal
 var modalInstance = new bootstrap.Modal(modalKomentar);
-
+// modal Error
+function showError(heading,pesan) {
+    const Err = document.getElementById("modal-error");
+    var showErr = new bootstrap.Modal(Err);
+    const pesanErr = document.getElementById("pesan-error")
+    const headingErr = document.getElementById("heading-error")
+    headingErr.textContent = heading;
+    pesanErr.textContent = pesan;
+    
+    showErr.show();
+          setTimeout(function () {
+            showErr.hide();
+          }, 3000);
+}
 // form inputan
 const emailValue = document.getElementById('email-value');
 const nameValue = document.getElementById('name-value');
 const komentarValue = document.getElementById('komentar-value');
 const endpoint = "https://644b56f917e2663b9ded34b8.mockapi.io/komentar";
+// isi form otomatis saat user suda login
+emailValue.addEventListener("click",(event)=>{
+    event.preventDefault()
+    const isLoggedIn = localStorage.getItem("isLoggedIn");
+    const nama = localStorage.getItem("user");
+    const email = localStorage.getItem("email");
+    const kota = localStorage.getItem("city"); 
+    const nomor = localStorage.getItem("telp"); 
+    // mengisi form sesuai data user jika user sudah login
+    if (isLoggedIn) {
+        nameValue.value = nama;
+      emailValue.value = email;
+    }
+  })
 
 const renderPosts = (posts) => {
     posts.map((post) => {
@@ -58,7 +85,6 @@ const renderPosts = (posts) => {
 
 // Get dan Read posts
 // GET
-
 fetch(endpoint)
     .then((res) => {
         return res.json();
@@ -69,7 +95,12 @@ fetch(endpoint)
 // POST
 addPostForm.addEventListener('submit', (e) => {
     e.preventDefault();
-
+  // mengecek apakah user sudah login saat mensubmit petisi
+  const isLoggedIn = localStorage.getItem("isLoggedIn");
+  if (!isLoggedIn) {
+    showError("Akses ditolak: Login dibutuhkan","Silahkan Login untuk dapat menambahkan komentar")
+    
+  }else{
     fetch(endpoint, {
         method: 'POST',
         headers: {
@@ -93,4 +124,5 @@ addPostForm.addEventListener('submit', (e) => {
             window.location.href = window.location.href;
           }, 1000);
         })
+  }
 })

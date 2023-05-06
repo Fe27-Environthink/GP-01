@@ -38,31 +38,32 @@ const searchArticle = () => {
         article.innerHTML = "";
         searchResult.map((datas, indexs) => {
           article.innerHTML += `
-          <div class="col-12 col-sm-12 col-md-6 col-lg-4 mb-3 pt-4">
-            <div class="card card-artikel h-100">
-              <img
-                src="${datas.images}"
-                class="card-img-top"
-                alt="artikel"
-              />
-              <div class="card-body">
-                <a
-                  class="wrapperLinkTitleArticles"
-                  href="detailArticle.html?id=${indexs + 1}"
-                >
-                  <h5 class="card-title text-break">${datas.titleArticle}</h5>
-                </a>
-                <p class="card-text" style="color: #595959; text-align: justify">
-                  ${datas.descArticle}
-                </p>
-                <p class="fw-bold" style="color: #6f7376">
-                  <span class="author">${datas.author}</span>
-                  <span id="dot2"></span>
-                  <span class="date">${datas.date}</span>
-                </p>
+            <div class="col-12 col-sm-12 col-md-6 col-lg-4 mb-3 pt-4">
+              <div class="card card-artikel h-100">
+                <img
+                  src="${datas.images}"
+                  class="card-img-top"
+                  alt="artikel"
+                />
+                <div class="card-body">
+                  <a
+                    class="wrapperLinkTitleArticles"
+                    href="detailArticle.html?id=${indexs + 1}"
+                  >
+                    <h5 class="card-title text-break">${datas.titleArticle}</h5>
+                  </a>
+                  <p class="card-text" style="color: #595959; text-align: justify">
+                    ${datas.descArticle}
+                  </p>
+                  <p class="fw-bold" style="color: #6f7376">
+                    <span class="author">${datas.author}</span>
+                    <span id="dot2"></span>
+                    <span class="date">${datas.date}</span>
+                  </p>
+                </div>
               </div>
             </div>
-          </div>`;
+          `;
         });
       }
     });

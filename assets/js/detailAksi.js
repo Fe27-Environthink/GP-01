@@ -1,8 +1,6 @@
 const detailAksi = document.getElementById("aksi");
-
 const urlParams = new URLSearchParams(window.location.search);
 const aksiId = urlParams.get("id");
-// console.log(aksiId);
 const fetchDetailAksi = fetch(
   `https://64506cd6e1f6f1bb22977ba9.mockapi.io/aksi/${aksiId}`
 );
@@ -14,7 +12,7 @@ fetchDetailAksi
 
     let desc = `${data.jumlahDukungan}  orang yang sudah mendukung`;
     let paragrafPetisi = data.paragrafPetisi;
-
+    // dom aksi sesuai dengan jumlah orang yang sudah mengisi
     if (data.Target - data.jumlahDukungan == 0) {
       desc = "Petisi Mencapai Kemenangan";
       document.getElementById("caption-bar").textContent = 0;
@@ -28,6 +26,7 @@ fetchDetailAksi
     } else if (data.jumlahDukungan == 0) {
       desc = "belum ada dukungan";
     }
+
     document.getElementById("title").textContent = data.nama;
     document.getElementById("image").src = data.image;
     document.getElementById("paragraf1").textContent = data.paragraf1;
@@ -43,21 +42,34 @@ fetchDetailAksi
     document.getElementById("bar-petisi").style.width = Persentase + "%";
   });
 
+// modal
+const modalPetisi = document.getElementById("modal-petisi");
+var modalInstance = new bootstrap.Modal(modalPetisi);
 // form petisi
 const formPetisi = document.getElementById("form-petisi");
-const modalPetisi = document.getElementById("modal-petisi");
-const modalError = document.getElementById("modal-email-error");
-
-// modal
-var modalInstance = new bootstrap.Modal(modalPetisi);
-var modalErr = new bootstrap.Modal(modalError);
 // mengambil form inputan
 const checkPetisi = document.getElementById("flexCheckDefault");
 const inputNama = document.getElementById("namaLengkap");
-
 const inputanEmail = document.getElementById("email");
 const inputanTelepon = document.getElementById("nomorTelepone");
 const inputanKota = document.getElementById("kota");
+
+  // mengambil data user dari local storage
+inputNama.addEventListener("click",(event)=>{
+  event.preventDefault()
+  const isLoggedIn = localStorage.getItem("isLoggedIn");
+  const nama = localStorage.getItem("user");
+  const email = localStorage.getItem("email");
+  const kota = localStorage.getItem("city"); 
+  const nomor = localStorage.getItem("telp"); 
+  // mengisi form sesuai data user jika user sudah login
+  if (isLoggedIn) {
+    inputNama.value = nama;
+    inputanEmail.value = email;
+    inputanTelepon.value = nomor;
+    inputanKota.value = kota;
+  }
+})
 // mengirim hasil inputan ke api
 formPetisi.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -67,7 +79,7 @@ formPetisi.addEventListener("submit", (event) => {
   if (formValidation()) {
     var url = `https://64506cd6e1f6f1bb22977ba9.mockapi.io/aksi/${aksiId}/kontributor`;
     var urlAksi = `https://64506cd6e1f6f1bb22977ba9.mockapi.io/aksi/${aksiId}`;
-
+    // data yang akan dikirim ke API
     var data = {
       email: inputanEmail.value,
       name: inputNama.value,
@@ -86,13 +98,10 @@ formPetisi.addEventListener("submit", (event) => {
           (email) => email.email === inputanEmail.value
         );
         if (email) {
-          //menampilkan modal error
-          modalErr.show();
-          setTimeout(function () {
-            modalErr.hide();
-           
-          }, 3000);
+          
+          showError("Email sudah digunakan !","Silahkan gunakan email yang lain untuk menandatangai petisi ini")
         } else {
+          // menyimpan data kontributor ke api dan mengupdate data petisi
           fetch(urlAksi, {
             method: "PUT",
             headers: {
@@ -107,7 +116,6 @@ formPetisi.addEventListener("submit", (event) => {
             headers: {
               "Content-Type": "application/json",
             },
-
             body: JSON.stringify(data),
           })
             .then((response) => response.json())
@@ -124,6 +132,21 @@ formPetisi.addEventListener("submit", (event) => {
   }
 });
 
+// fungsi popup modal error
+function showError(heading,pesan) {
+    const Err = document.getElementById("modal-error");
+    var showErr = new bootstrap.Modal(Err);
+    const pesanErr = document.getElementById("pesan-error")
+    const headingErr = document.getElementById("heading-error")
+    headingErr.textContent = heading;
+    pesanErr.textContent = pesan;
+
+    showErr.show();
+          setTimeout(function () {
+            showErr.hide();
+          }, 3000);
+}
+ 
 // form validation
 function formValidation() {
   let valid = true;
@@ -132,8 +155,11 @@ function formValidation() {
     valid = false;
     console.log("belum dicentang");
   }
-  // else{
-  //     console.log("sukes  dicetak");
-  // }
+  // mengecek apakah user sudah login saat mensubmit petisi
+  const isLoggedIn = localStorage.getItem("isLoggedIn");
+  if (!isLoggedIn) {
+    showError("Akses ditolak: Login dibutuhkan","Silahkan Login untuk dapat mengisi petisi")
+    valid = false;
+  }
   return valid;
 }
