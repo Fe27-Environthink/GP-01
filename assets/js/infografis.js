@@ -9,7 +9,7 @@ fetch("https://644d177e57f12a1d3dd777a1.mockapi.io/infografis")
         // menampilkan data dengan index 0-2
         for (let i = 0; i < 3; i++) {
                  infografis.innerHTML += `
-        <div class="col-md-4 mb-3">
+        <div class="col-md-6 col-lg-4 mb-3">
             <div class="card card-infografis h-100">
                 <img src=${data[i].images} style="cursor: pointer;" class="card-img-top" data-bs-toggle="modal" data-bs-target="#${data[i].id}Backdrop" alt="artikel">
                 <div class="card-body">
@@ -43,7 +43,7 @@ fetch("https://644d177e57f12a1d3dd777a1.mockapi.io/infografis")
         btnInfografis.addEventListener("click",()=>{
            for (let i = index; i < index+3 &&  i < data.length ; i++) {
             infografis.innerHTML += `
-            <div class="col-md-4 mb-3">
+            <div class="col-md-6 col-lg-4 mb-3">
                 <div class="card h-100 card-infografis">
                     <img src=${data[i].images} style="cursor: pointer;" class="card-img-top" data-bs-toggle="modal" data-bs-target="#${data[i].id}Backdrop" alt="artikel">
                     <div class="card-body">
@@ -65,8 +65,7 @@ fetch("https://644d177e57f12a1d3dd777a1.mockapi.io/infografis")
                         </div>
                     </div>
                 </div>
-            </div>
-            
+            </div>   
             `
            }
            index=index+3

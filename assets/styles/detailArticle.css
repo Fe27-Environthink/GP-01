@@ -30,6 +30,10 @@ nav {
   width: 50%;
 }
 
+.paragraf {
+  text-align: justify;
+}
+
 .wrapperLinkTitleArticles {
   color: black;
   text-decoration: none;
