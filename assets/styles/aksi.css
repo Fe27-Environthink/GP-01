@@ -1,3 +1,26 @@
+.card-aksi {
+  cursor: pointer;
+  background: #ffffff;
+  border: 1px solid #d9d9d9;
+  box-shadow: 0px 8px 24px rgba(112, 144, 176, 0.15);
+  border-radius: 8px;
+  padding-bottom: 10px;
+}
+
+.card-aksi:hover {
+  cursor: pointer;
+  box-shadow: 0px 8px 28px rgba(1, 1, 1, 0.15);
+  border-radius: 8px;
+}
+
+.paragraf {
+  text-align: justify;
+}
+
+.detail-aksi {
+  text-align: justify;
+}
+
 #aksi p {
   color: black;
 }

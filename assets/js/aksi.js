@@ -23,12 +23,12 @@ fetchAksi
   
         aksiList.innerHTML +=`
         <div class="col-md-4 col-sm-6 mb-4 ">
-            <div class="card h-100" >
+            <div class="card card-aksi h-100" >
                 <img src="${data[i].image}" class="card-img-top" alt="...">
                 <div class="card-body">
                   <h6 class="card-title">${data[i].nama}</h6>
                   <p class="card-text text-secondary"><icon class="fa fa-users text-secondary me-2 "> </icon>${desc}</p>
-                  <a href="${link}" id="btn-aksi"    class="btn d-block ${classLink} ">Pelajari Selengkapnya</a>
+                  <a href="${link}" id="btn-aksi" class="btn d-block ${classLink} ">Pelajari Selengkapnya</a>
                 </div>
               </div>
               
