@@ -1,0 +1,118 @@
+/* Font */
+@font-face {
+  font-family: "Semibold";
+  src: url(../font/static/PlusJakartaSans-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: "Regular";
+  src: url(../font/static/PlusJakartaSans-Regular.ttf);
+}
+
+:root {
+  --color-bg: #ffffff;
+  --color-main: #14ae5c;
+}
+
+/* Navbar */
+nav {
+  font-family: "Semibold";
+  background-color: #ffffff;
+}
+
+#logo {
+  height: 2.4em;
+}
+
+#dot2 {
+  height: 7px;
+  width: 7px;
+  background-color: #6f7376;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 0.3em;
+}
+
+/* Search */
+.inputSearch {
+  font-family: "Regular";
+}
+
+.inputSearch:focus {
+  border: 2px solid var(--color-main) !important;
+}
+.btnDonasi {
+  background-color: var(--color-main) !important;
+  color: var(--color-bg) !important;
+}
+
+/* Cari Button */
+.btnCari {
+  /* padding: 0.4em 2.5em !important; */
+  font-family: "Semibold" !important;
+  background-color: var(--color-main) !important;
+}
+
+/* Search Result Article */
+.wrapperLinkTitleArticles {
+  cursor: pointer;
+  color: black;
+  text-decoration: none;
+  text-decoration-color: black;
+}
+
+.wrapperLinkTitleArticles:hover {
+  cursor: pointer;
+  color: black;
+  text-decoration: underline;
+  text-decoration-color: black;
+}
+
+.wrapperNotFound {
+  background-color: #f1f1f1;
+}
+
+.titleNotFoundArticle {
+  font-family: "Semibold";
+}
+
+.possibleNotFoundKeyword1,
+.possibleNotFoundKeyword2 {
+  font-family: "Semibold";
+}
+/* Footer */
+footer {
+  font-family: "Semibold";
+  background-color: var(--color-main);
+}
+
+.judulDeskripsiEnvironthink {
+  color: #25ff01 !important;
+}
+
+.container p {
+  color: white;
+}
+
+#copyRightLine {
+  height: 2px;
+  border: none;
+  background-color: white;
+}
+
+/* Media Query */
+@media screen and (max-width: 576px) {
+  #medsos {
+    margin-top: 1em;
+  }
+
+  #country {
+    margin-top: 0.2em;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  footer {
+    margin-top: 10.5em;
+  }
+}

@@ -1,0 +1,29 @@
+#aksi p {
+  color: black;
+}
+
+#btn-aksi-lainnya {
+  border: 2px solid var(--color-main) !important;
+  font-family: "Semibold";
+  color: var(--color-main) !important;
+}
+
+#btn-aksi-lainnya:hover {
+  background-color: #14ae5c;
+  border: 2px solid var(--color-main) !important;
+  font-family: "Semibold";
+  color: var(--color-bg) !important;
+}
+
+footer {
+  margin-top: 40px;
+}
+.button {
+  border-color: red;
+}
+.card img {
+  height: 230px;
+}
+.btn-petisi {
+  background-color: #ff4d4f;
+}
