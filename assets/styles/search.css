@@ -41,6 +41,7 @@ nav {
 .inputSearch:focus {
   border: 2px solid var(--color-main) !important;
 }
+
 .btnDonasi {
   background-color: var(--color-main) !important;
   color: var(--color-bg) !important;

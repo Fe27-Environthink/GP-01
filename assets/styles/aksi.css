@@ -41,12 +41,15 @@
 footer {
   margin-top: 40px;
 }
+
 .button {
   border-color: red;
 }
+
 .card img {
   height: 230px;
 }
+
 .btn-petisi {
   background-color: #ff4d4f;
 }
